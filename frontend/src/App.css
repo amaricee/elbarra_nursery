@@ -37,6 +37,30 @@
   font-size: 20px;
 }
 
+/* ===== ABOUT US ===== */
+.about-us-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-us-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #043915;
+}
+
+.about-us-text {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 /* ===== PRODUCT SECTION ===== */
 
 .product-section {
@@ -44,17 +68,40 @@
   text-align: center;
 }
 
+/* Judul Produk */
 .product-title {
+  color: #043915;
   font-size: 32px;
   margin-bottom: 20px;
 }
 
+/* Grid card produk */
 .product-grid {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
+
+/* Link More Products di tengah */
+.more-products-link {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4C763B;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.more-products-link:hover {
+  color: #043915;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}
+
+
 
 /* ===== FOOTER ===== */
 

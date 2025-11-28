@@ -1,6 +1,6 @@
-import "./ProductCard.css";
+import "./ProductSection.css";
 
-function ProductCard() {
+function ProductSection() {
   return (
     <div className="product-card">
       <div className="product-image"></div>
@@ -10,4 +10,4 @@ function ProductCard() {
   );
 }
 
-export default ProductCard;
+export default ProductSection;
