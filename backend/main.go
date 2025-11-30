@@ -1,17 +1,27 @@
 package main
 
 import (
-    "elbarra_nursery/backend/config"
-    "elbarra_nursery/backend/routes"
-    "github.com/gin-gonic/gin"
+	"log"
+
+	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
+
+	"elbarra_nursery/backend/config"
+	"elbarra_nursery/backend/routes"
 )
 
 func main() {
-    config.ConnectDatabase()
+	// Load file .env
+	err := godotenv.Load()
+	if err != nil {
+		log.Println("⚠️  .env file not found, using system environment variables")
+	}
 
-    r := gin.Default()
+	config.ConnectDatabase()
 
-    routes.AuthRoutes(r)
+	r := gin.Default()
 
-    r.Run(":8080")
+	routes.AuthRoutes(r)
+
+	r.Run(":8080")
 }
