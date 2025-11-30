@@ -1,0 +1,56 @@
+/* Verify.css */
+
+.verify-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.verify-container h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.verify-container form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.verify-container form button {
+  width: 100%;
+  padding: 12px;
+  background: #17a2b8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.verify-container form button:hover {
+  background: #117a8b;
+}
+
+.verify-container p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.verify-container p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.verify-container p a:hover {
+  text-decoration: underline;
+}

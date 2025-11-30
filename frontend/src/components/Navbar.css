@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  padding: 30px 100px;
+  padding: 20px 100px; /* dikurangi supaya lebih pas */
   position: absolute;
   top: 0;
   left: 0;
@@ -20,6 +20,7 @@
 .navbar-links {
   display: flex;
   gap: 20px;
+  align-items: center; /* pastikan semua item sejajar secara vertikal */
 }
 
 .navbar-links a {
@@ -32,4 +33,56 @@
 
 .navbar-links a:hover {
   opacity: 0.8;
+}
+
+.profile-menu {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* pastikan icon vertikal sejajar */
+}
+
+.profile-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  margin-left: 10px; /* beri jarak dengan link terakhir */
+  flex-shrink: 0; /* jangan mengecil */
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 120px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.dropdown a,
+.dropdown button {
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: black;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background: #f0f0f0;
 }

@@ -1,10 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Verify from "./pages/Verify";
+// COMPONENTS UNTUK HOMEPAGE
 import Navbar from "./components/Navbar";
 import Heading from "./components/Heading";
 import AboutUs from "./components/AboutUs";
 import ProductSection from "./components/ProductSection";
+
 import "./App.css";
 
-function App() {
+// PAGES AUTH
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+
+function Home() {
   return (
     <>
       <Navbar />
@@ -52,6 +61,23 @@ function App() {
         </p>
       </footer>
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* HOMEPAGE */}
+        <Route path="/" element={<Home />} />
+
+        {/* AUTH PAGES */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/verify" element={<Verify />} /> {/* route verifikasi */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
