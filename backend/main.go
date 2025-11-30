@@ -1,15 +1,17 @@
 package main
 
 import (
-	"backend/controllers"
-	"github.com/gin-gonic/gin"
+    "elbarra_nursery/backend/config"
+    "elbarra_nursery/backend/routes"
+    "github.com/gin-gonic/gin"
 )
 
 func main() {
-	r := gin.Default()
+    config.ConnectDatabase()
 
-	// Route Home
-	r.GET("/", controllers.HomePage)
+    r := gin.Default()
 
-	r.Run(":8080") // backend akan berjalan di localhost:8080
+    routes.AuthRoutes(r)
+
+    r.Run(":8080")
 }
